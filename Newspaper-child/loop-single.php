@@ -73,13 +73,12 @@ if (have_posts()) {
               </div><!-- .shareboxes -->
 
             </div><!-- .share-container -->
-
+            
 
         <?php echo $td_mod_single->get_content();?>
-        
         </div>
 
-        
+
         <!-- Mediamatic Player -->
         <div id="mm-player"></div>
 
@@ -98,26 +97,26 @@ if (have_posts()) {
             <?php echo $td_mod_single->get_next_prev_posts();?>
             <?php echo $td_mod_single->related_posts();?>
 
-
             <?php if ( !in_category('video') && function_exists('player_mediamatic') ) {
                 player_mediamatic();
             } else {
                 //
             } ?>
 
-            
-           <?php if (function_exists('adv_in_article')) {
+
+            <?php if (function_exists('adv_in_article')) {
               adv_in_article();
             } ?>
             
+            <?php if (function_exists('adv_top_mobile_single')) {
+              adv_top_mobile_single();
+            } ?>
             
-              <?php if (function_exists('correlati_adsense')) {
+                <?php if (function_exists('correlati_adsense')) {
               correlati_adsense();
             } ?>
+       
 
-
-
-            <!-- Correlati 4W -->
             <?php if (function_exists('correlati_4w')) {
               correlati_4w();
             } ?>
